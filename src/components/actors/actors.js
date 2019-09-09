@@ -10,9 +10,9 @@ export default class Actors extends Component {
     }
 
     componentDidMount() {
-        this.apiService.getActors().then((actorsL) => {
+        this.apiService.getActors().then((actorsList) => {
             this.setState({
-                actorsList: actorsL
+                actorsList
             })
         })
     }
@@ -30,7 +30,7 @@ export default class Actors extends Component {
     render() {
         const { actorsList } = this.state;
         const actors = this.renderActors(actorsList);
-        console.log(this.state)
+
         return (
             <Fragment>
                 {actors}
