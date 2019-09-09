@@ -1,11 +1,12 @@
-import React from 'react';
-import Header from '../header/header';
+import React, { Fragment } from 'react';
+import Header from '../header';
 
-const App = () => {
+const App = ({children}) => {
     return (
-        <div>
-            <h1>fff</h1>
-        </div>
+        <Fragment>
+            <Header/>
+            {children}
+        </Fragment>
     );
 }
 
