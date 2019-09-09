@@ -3,7 +3,10 @@ export default class ApiService {
 
     async getResource(url) {
         const res = await fetch(`${this._baseURL}${url}`);
-      
+
+        if(!res.ok) {
+            throw new Error(`not fetch ${url} , received ${res.status}`)
+        }
         return await res.json();
     }
     async getActors(){

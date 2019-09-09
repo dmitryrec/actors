@@ -6,7 +6,8 @@ export default class Actors extends Component {
     apiService = new ApiService();
 
     state = {
-        actorsList: []
+        actorsList: [],
+        text: ''
     }
 
     componentDidMount() {
@@ -27,12 +28,25 @@ export default class Actors extends Component {
         })
     }
 
+    handleChange = (e) => {
+        this.setState({ text: e.target.value });
+    }
+
     render() {
         const { actorsList } = this.state;
         const actors = this.renderActors(actorsList);
 
         return (
             <Fragment>
+                <form>
+                <input
+                    type="text"
+                    onChange={this.handleChange}
+                    value={this.state.text}
+                />
+                <button>add</button>
+                </form>
+                
                 {actors}
             </Fragment>
         )
