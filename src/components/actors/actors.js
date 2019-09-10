@@ -16,6 +16,7 @@ export default class Actors extends Component {
                 actorsList
             })
         })
+        console.log(this.state)
     }
 
     renderActors(arr) {
@@ -23,6 +24,7 @@ export default class Actors extends Component {
             return (
                 <li key={Math.random()}>
                     {name}
+                    <button>del</button>
                 </li>
             )
         })
@@ -30,15 +32,30 @@ export default class Actors extends Component {
 
     handleChange = (e) => {
         this.setState({ text: e.target.value });
+    };
+
+    handleSubmit = (e) => {
+        e.preventDefault();
+        if(!this.state.length){
+            return
+        }
+        const newActor = {
+            text: this.state.text,
+            id: Math.random()
+        };
+        this.setState(({actorsList})=>({
+             ...actorsList, newActor
+        }))
     }
 
     render() {
         const { actorsList } = this.state;
         const actors = this.renderActors(actorsList);
+        console.log(this.state)
 
         return (
             <Fragment>
-                <form>
+                <form onSubmit={this.handleSubmit}>
                 <input
                     type="text"
                     onChange={this.handleChange}
