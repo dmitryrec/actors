@@ -4,7 +4,7 @@ import App from './components/app';
 import * as serviceWorker from './serviceWorker';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
-import Actors from './components/actors';
+import Actors from './components/actors/actors-list';
 import Home from './components/home';
 
 ReactDOM.render((
