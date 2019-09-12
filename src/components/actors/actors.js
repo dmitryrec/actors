@@ -68,12 +68,9 @@ export default class Actors extends Component {
                 />
                 <button type="submit">add</button>
                 <ul>
-                    {/* {actorsList.map(({ name, url }) => {
-                        return ( */}
+                
                     <ActorsList actorsList={actorsList} onDelActor={this.onDelete} />
-                    {/* 
-                        )
-                    })} */}
+                    
                 </ul>
             </form>
         )
