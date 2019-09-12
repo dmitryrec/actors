@@ -1,0 +1,20 @@
+.header {
+    border-bottom: 1px solid gray;
+    font-size: 20px;
+}
+
+.nav > ul {
+    border: 1px solid;
+    padding: 0px;
+}
+
+.nav > li {
+    display: block;
+    list-style: none;
+    margin-bottom: 10px;
+    padding: 0px;
+}
+
+li a {
+    text-decoration: none;
+}
