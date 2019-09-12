@@ -1,5 +1,6 @@
 import React, { Fragment } from 'react';
 import Header from '../header';
+import './app.css'
 
 const App = ({children}) => {
     return (
