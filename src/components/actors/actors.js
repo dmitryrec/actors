@@ -5,9 +5,9 @@ export default class ActorsList extends Component {
     render() {
         const { name, url, onDelActor } = this.props;
         return (
-            <li key={Math.random()}>
+            <li key={url}>
                 {name}
-                <button onClick={onDelActor}>del</button>
+                <button onClick={() => onDelActor(url)}>del</button>
             </li>
         )
     }
