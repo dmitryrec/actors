@@ -20,7 +20,6 @@ export default class Actors extends Component {
     }
     onDelete = (url) => {
         this.setState(({ actorsList }) => {
-            console.log(url);
             const items = actorsList.filter((item) => item.url !== url);
             return { actorsList: items };
         });
@@ -64,12 +63,12 @@ export default class Actors extends Component {
                 />
                 <button type="submit">add</button>
                 <ul>
-                    {actorsList.map(({ name, url }) => {
-                        return (
-                            <ActorsList name={name} url={url} onDelActor={this.onDelete} />
-
+                    {/* {actorsList.map(({ name, url }) => {
+                        return ( */}
+                    <ActorsList actorsList={actorsList} onDelActor={this.onDelete} />
+                    {/* 
                         )
-                    })}
+                    })} */}
                 </ul>
             </form>
         )

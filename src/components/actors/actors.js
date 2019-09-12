@@ -1,15 +1,11 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-export default class ActorsList extends Component {
+const ActorsList = ({ ...props }) => {
+    return props.actorsList.map(({ name, url }) =>
+        <li key={url}>
+            {name}
+            <button onClick={() => props.onDelActor(url)}>del</button>
+        </li>)
 
-    render() {
-        const { name, url, onDelActor } = this.props;
-        return (
-            <li key={url}>
-                {name}
-                <button onClick={() => onDelActor(url)}>del</button>
-            </li>
-        )
-    }
 }
-
+export default ActorsList;
