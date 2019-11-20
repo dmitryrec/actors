@@ -29,8 +29,8 @@ export default class Actors extends Component {
     onSubmit = (e) => {
         e.preventDefault();
         const { text } = this.state;
-        this.setState({ text: '' });
         this.onActorAdded(text)
+        this.setState({ text: '' });
 
     };
 
