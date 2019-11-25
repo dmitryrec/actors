@@ -7,8 +7,16 @@ const Header = () => {
         <header className="header">
             <nav>
                 <ul className="nav">
-                    <li><Link to='/'>Home</Link></li>
-                    <li><Link to='/actors'>Actors</Link></li>
+                    <li>
+                        <Link to='/'>
+                        Home
+                         </Link>
+                    </li>
+                    <li>
+                        <Link to='/actors'>
+                        Actors
+                        </Link>
+                    </li>
                 </ul>
             </nav>
         </header>

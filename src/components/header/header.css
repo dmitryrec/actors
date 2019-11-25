@@ -3,6 +3,14 @@
     font-size: 20px;
     background: rgb(190, 190, 190);
     padding-top: 10px;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
 .nav > ul {
@@ -11,13 +19,19 @@
 }
 
 .nav > li {
-    display: block;
+    box-shadow: 0px 0px 5px rgb(190, 190, 190);
     list-style: none;
     margin-bottom: 10px;
     padding: 0px;
+    transition: 1s all ease;
+}
+
+.nav > li:hover {
+    box-shadow: 0px 0px 1px rgb(0, 0, 0);
 }
 
 li a {
     text-decoration: none;
     color: black;
+    margin: 0 40px;
 }
