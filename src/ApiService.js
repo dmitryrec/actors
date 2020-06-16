@@ -1,5 +1,5 @@
 export default class ApiService {
-    _baseURL = 'https://swapi.co/api';
+    _baseURL = 'https://swapi.dev/api';
 
     async getResource(url) {
         const res = await fetch(`${this._baseURL}${url}`);
@@ -15,11 +15,5 @@ export default class ApiService {
     }
 }
 
-// const swapi = new ApiService();
 
-// swapi.getActors().then((people)=>{
-//     people.forEach(p => {
-//         console.log(p.name);
-//     });
-// })
 
